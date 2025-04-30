@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ML Prediction Form</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: url('/static/images/CKD3.jpg') no-repeat center center/cover;
+      overflow: auto;
+    }
+
+    #formSection {
+      min-height: 100vh;
+      padding: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .container {
+      width: 56%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      overflow-y: auto;
+      max-height: 90vh;
+      color: #fff;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      text-align: center;
+      color: #00dfc4;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    input, select {
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      background-color: rgba(255,255,255,0.9);
+      color: #333;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    input:focus, select:focus {
+      background-color: #e0f7fa;
+    }
+
+    button[type="submit"] {
+      padding: 12px;
+      background: linear-gradient(135deg, #00dfc4, #4facfe);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.4s ease;
+    }
+
+    button[type="submit"]:hover {
+      background: linear-gradient(135deg, #4facfe, #00dfc4);
+    }
+
+    @media (max-width: 768px) {
+      #formSection {
+        padding: 20px;
+        justify-content: center;
+      }
+      .container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Form Section Only -->
+  <div id="formSection">
+    <div class="container">
+      <h1>ML Prediction</h1>
+      <form action="/predict" method="POST">
+        <label for="age">Age (years):</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="bp">Blood Pressure (mm/Hg):</label>
+        <input type="number" id="bp" name="bp" step="0.01" required>
+
+        <label for="sg">Urine Specific Gravity:</label>
+        <input type="number" id="sg" name="sg" step="0.001" required>
+
+        <label for="al">Albumin in Urine (0-5):</label>
+        <input type="number" id="al" name="al" step="0.01" required>
+
+        <label for="hemo">Hemoglobin Level (g/dL):</label>
+        <input type="number" id="hemo" name="hemo" step="0.01" required>
+
+        <label for="sc">Serum Creatinine (mg/dL):</label>
+        <input type="number" id="sc" name="sc" step="0.01" required>
+
+        <label for="htn">Hypertension (yes/no):</label>
+        <input type="text" id="htn" name="htn" required>
+
+        <label for="dm">Diabetes Mellitus (yes/no):</label>
+        <input type="text" id="dm" name="dm" required>
+
+        <label for="cad">Coronary Artery Disease (yes/no):</label>
+        <input type="text" id="cad" name="cad" required>
+
+        <label for="appet">Appetite Status (good/poor):</label>
+        <input type="text" id="appet" name="appet" required>
+
+        <label for="pc">Pus Cell Status (normal/abnormal):</label>
+        <input type="text" id="pc" name="pc" required>
+
+        <button type="submit">Predict</button>
+      </form>
+      {% if prediction_text %}
+  <h2 style="color: #00dfc4;">{{ prediction_text }}</h2>
+{% endif %}
+
+    </div>
+  </div>
+
+</body>
+</html>

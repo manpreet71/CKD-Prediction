@@ -45,9 +45,9 @@ This project focuses on predicting **Chronic Kidney Disease (CKD)** using a mach
 
 ## 🧪 Evaluation
 
-- **Accuracy**: ~97%
+- **Accuracy**: ~100%
 - **F1 Score**: High, indicating balanced performance
-- **Confusion Matrix**: Low false negatives and false positives
+- **Confusion Matrix**: 0 false negatives and false positives
 - **Cross-validation**: Used to validate model generalization
 
 ---

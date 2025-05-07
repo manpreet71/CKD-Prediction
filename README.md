@@ -121,8 +121,6 @@ All dependencies are listed in `requirements.txt`. Some key packages:
 - pandas
 - numpy
 - scikit-learn
-- matplotlib (for plots if any)
-
 ---
 
 ## 📣 Future Improvements

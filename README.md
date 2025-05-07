@@ -2,7 +2,6 @@
 
 
 
-
 # 🩺 Chronic Kidney Disease Prediction Project
 
 ## 📌 Overview
@@ -36,7 +35,7 @@ This project focuses on predicting **Chronic Kidney Disease (CKD)** using a mach
 ## 🧠 Model Training
 
 - **Notebook**: `project_main.ipynb`
-- **Model Used**: Gradient Boosting Classifier (`model_gbc.pkl`)
+- **Model Used**: Gradient Boosting Classifier (`model_rfc.pkl`)
 - **Data Processing**:
   - Missing value imputation
   - Label encoding for categorical features
@@ -70,7 +69,7 @@ This project focuses on predicting **Chronic Kidney Disease (CKD)** using a mach
 project/
 │
 ├── models5/
-│   ├── model_gbc.pkl
+│   ├── model_rfc.pkl
 │   └── scaler.pkl
 │
 ├── static/
@@ -93,12 +92,8 @@ project/
 
 ## 📷 Screenshots
 
-You can add screenshots like this:
-
-```markdown
 ![Screenshot 2025-04-30 133348](https://github.com/user-attachments/assets/cb5e82bc-6e82-4a66-8fc3-1b1dce90054c)
 ![Screenshot 2025-04-30 140834](https://github.com/user-attachments/assets/c1be3fd5-5d13-4113-9bff-5f5c453f5dd0)
-```
 
 ---
 
@@ -117,7 +112,7 @@ python app.py
 
 1. User inputs patient data on the web interface.
 2. Data is preprocessed and scaled using the saved `scaler.pkl`.
-3. Model makes a prediction using `model_gbc.pkl`.
+3. Model makes a prediction using `model_rfc.pkl`.
 4. Output (CKD / Not CKD) is displayed on the web page.
 
 ---

@@ -1,6 +1,3 @@
-# CKD-Prediction
-
-
 
 # 🩺 Chronic Kidney Disease Prediction Project
 
@@ -35,7 +32,7 @@ This project focuses on predicting **Chronic Kidney Disease (CKD)** using a mach
 ## 🧠 Model Training
 
 - **Notebook**: `project_main.ipynb`
-- **Model Used**: Gradient Boosting Classifier (`model_rfc.pkl`)
+- **Model Used**: Random Forest Classifier (`model_rfc.pkl`)
 - **Data Processing**:
   - Missing value imputation
   - Label encoding for categorical features

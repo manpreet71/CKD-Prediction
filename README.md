@@ -36,7 +36,7 @@ This project focuses on predicting **Chronic Kidney Disease (CKD)** using a mach
 - **Data Processing**:
   - Missing value imputation
   - Label encoding for categorical features
-  - Standard scaling with `StandardScaler`
+  - Scaling features with `MinmaxScaler`
 
 - **Manually Encoded Columns**:
   - Categorical features like `htn`, `dm`, `cad`, `appet`, and `pc` were label encoded to numerical values to be used by the model.
